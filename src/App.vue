@@ -13,20 +13,19 @@
     <input type="text" v-model="message">
     <h4 v-if="!seen">Fuck</h4>
     <ol>
-      <li v-for="todo in todos">
-        {{todo.text}}
-      </li>
+      <todo v-for="todo in todos" v-bind:todo="todo"></todo>
     </ol>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello'
-import Todo from './components/Todo'
+// import Hello from './components/Hello'
+import todo from './components/todo'
 
 export default {
+
   components: {
-    Hello
+    todo
   },
   data () {
     return {
